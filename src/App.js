@@ -1,8 +1,15 @@
 import { Component } from 'react';
 
+import Palette from './Palette';
+import seedColor from './seedColor';
+
 class App extends Component {
 	render() {
-		return <h1>Im in</h1>;
+		return (
+			<div>
+				<Palette {...seedColor[0]} />
+			</div>
+		);
 	}
 }
 
