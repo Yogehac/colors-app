@@ -7,9 +7,14 @@ class ColorBox extends Component {
 		const { color, name } = this.props;
 
 		return (
-			<div style={{ backgroundColor: color }} className="ColorBox">
-				<span>{name}</span>
-				<span>More</span>
+			<div style={{ background: color }} className="ColorBox">
+				<div className="copy-container">
+					<div className="box-content">
+						<span>{name}</span>
+					</div>
+					<button className="copy-btn">Copy</button>
+				</div>
+				<span className="see-more">More</span>
 			</div>
 		);
 	}
