@@ -28,7 +28,9 @@ class Palette extends Component {
 
 		return (
 			<div className="Palette">
-				<Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={this.handleChange} />
+				<div className="slider">
+					<Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={this.handleChange} />
+				</div>
 				{/* Navbar Component */}
 				<div className="Palette-colors">{colorBoxes}</div>
 				{/* Footer Component */}
