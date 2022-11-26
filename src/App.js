@@ -8,10 +8,9 @@ import './styles/App.css';
 
 class App extends Component {
 	render() {
-		console.log(generatePalette(seedColor[2]));
 		return (
 			<div>
-				<Palette palette={generatePalette(seedColor[2])} />
+				<Palette palette={generatePalette(seedColor[1])} />
 			</div>
 		);
 	}
