@@ -8,11 +8,23 @@ import { generatePalette } from './colorHelpers';
 import './styles/App.css';
 
 class App extends Component {
+	findPalette(id) {
+		return seedColor.find(function(palette) {
+			return palette.id == id;
+		});
+	}
+
 	render() {
 		return (
 			<Switch>
 				<Route exact path="/" render={() => <h1>Palette Lists</h1>} />
-				<Route exact path="/palette/:id" render={() => <h1>Inidvdual Component</h1>} />
+				<Route
+					exact
+					path="/palette/:id"
+					render={(routeProps) => (
+						<Palette palette={generatePalette(this.findPalette(routeProps.match.params.id))} />
+					)}
+				/>
 			</Switch>
 
 			// <div>
