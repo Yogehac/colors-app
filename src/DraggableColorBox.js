@@ -30,9 +30,7 @@ const styles = {
 		display: 'flex',
 		justifyContent: 'space-between'
 	},
-	deleteIcon: {
-		transition: 'all 0.3s ease-in-out'
-	}
+	deleteIcon: {}
 };
 
 const DraggableColorBox = SortableElement((props) => {
@@ -41,7 +39,11 @@ const DraggableColorBox = SortableElement((props) => {
 		<div className={classes.root} style={{ backgroundColor: color }}>
 			<div className={classes.boxContent}>
 				<span> {name}</span>
-				<DeleteIcon className={classes.deleteIcon} onClick={handleClick} />
+				<DeleteIcon
+					className={classes.deleteIcon}
+					onClick={handleClick}
+					style={{ transition: 'all 0.3s ease-in-out' }}
+				/>
 			</div>
 		</div>
 	);
