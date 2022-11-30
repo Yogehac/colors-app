@@ -15,6 +15,14 @@ const styles = {
 		'&:hover svg': {
 			color: 'white',
 			transform: 'scale(1.5)'
+		},
+		'@media(max-width: 991px)': {
+			width: '25%',
+			height: '20%'
+		},
+		'@media(max-width: 576px)': {
+			width: '100%',
+			height: '5%'
 		}
 	},
 	boxContent: {

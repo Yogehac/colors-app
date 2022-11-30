@@ -2,21 +2,31 @@ import { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import MiniPalette from './MiniPalette';
 import { Link } from 'react-router-dom';
+import bg from './styles/bg.svg';
 
 const styles = {
 	root: {
 		backgroundColor: 'blue',
+		padding: '10px',
 		height: '100vh',
 		display: 'flex',
 		alignItems: 'flex-start',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		backgroundColor: '#1e8feb',
+		backgroundImage: `url(${bg})`
 	},
 	container: {
 		width: '50%',
 		display: 'flex',
 		alignItems: 'flex-start',
 		flexDirection: 'column',
-		flexWrrap: 'wrap'
+		flexWrrap: 'wrap',
+		'@media(max-width: 991px)': {
+			width: '80%'
+		},
+		'@media(max-width: 576px)': {
+			width: '80%'
+		}
 	},
 	nav: {
 		width: '100%',
@@ -39,7 +49,12 @@ const styles = {
 		width: '100%',
 		display: 'grid',
 		gridTemplateColumns: 'repeat(3, 30%)',
-		gap: '5%'
+		gap: '1.5rem',
+		'@media(max-width: 576px)': {
+			gridTemplateColumns: 'repeat(1, 100%)',
+			gap: '1rem'
+			// width: '100%'
+		}
 	}
 };
 
